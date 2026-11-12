@@ -48,9 +48,17 @@ debug.cpurend.vsync=false
 # DPM
 persist.dpm.feature=1
 
-# HVDCP
+# HVDCP & 33W Fast Charging Optimization
 persist.vendor.cp.taper_term_mv=6500
-persist.vendor.cp.fcc_main_ua=400000
+persist.vendor.cp.fcc_main_ua=6000000
+persist.vendor.cp.fcc_step_ua=500000
+persist.vendor.hvdcp_opti.start=1
+persist.vendor.hvdcp_opti.enable=1
+persist.vendor.cp.qc3_max_power=33
+persist.vendor.cp.qc3_max_voltage=11000
+persist.vendor.cp.qc3_max_current=3000
+persist.vendor.cp.zchg_enable=1
+persist.vendor.cp.enable_hvdcp=1
 
 # IMS
 persist.dbg.volte_avail_ovr=1
@@ -113,3 +121,31 @@ persist.sys.wfd.virtual=0
 
 # USB
 persist.sys.usb.config=mtp
+
+# Qualcomm Perf & Power HAL Boost
+vendor.perf.gestureflingboost.enable=true
+vendor.perf.iop_v3.enable=true
+vendor.perf.workloadclassifier.enable=true
+ro.vendor.qti.core_ctl_min_cpu=2
+ro.vendor.qti.core_ctl_max_cpu=4
+ro.vendor.perf.thermal.game=10
+
+# Esports & Gaming Performance Tweaks
+persist.sys.pixelprops.games=false
+persist.sys.notch_killer=true
+
+# Esports Low Latency TCP / Network
+net.ipv4.tcp_ecn=0
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_fastopen=3
+net.ipv4.tcp_timestamps=1
+
+# Anti-Cheat & Security Integrity (PUBG Ultimate Royale & SafetyNet Bypass)
+ro.build.type=user
+ro.build.tags=release-keys
+ro.boot.flash.locked=1
+ro.boot.verifiedbootstate=green
+ro.boot.veritymode=enforcing
+ro.boot.vbmeta.device_state=locked
+ro.debuggable=0
+ro.secure=1

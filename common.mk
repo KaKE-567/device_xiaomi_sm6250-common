@@ -196,5 +196,5 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Explicitly strip bloatware packages
-PRODUCT_PACKAGES := $(filter-out AudioFX ExactCalculator Calculator Calendar Etar Camera2 Snap DeskClock Contacts FMRadio FM2 Messaging messaging Recorder Ymusic,$(PRODUCT_PACKAGES))
+PRODUCT_PACKAGES := $(filter-out AudioFX ExactCalculator Calculator Calendar Etar Camera2 Snap DeskClock Contacts FMRadio FM2 Messaging messaging Recorder Ymusic Jelly Profiles Backgrounds,$(PRODUCT_PACKAGES))
 
